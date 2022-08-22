@@ -6,7 +6,7 @@ session_start();
 
 error_reporting(0);
 
-$sql = "SELECT * FROM exercicio";
+$sql = "SELECT * FROM constest";
 $result = mysqli_query($conn, $sql);
 
 if (isset($_POST['submit'])) {
@@ -84,33 +84,16 @@ if (isset($_POST['submit'])) {
       <p class="login-text" style="font-size: 2rem; font-weight: 800;">Contest</p>
 
       <div class="input-group">
-        <button name="submit" class="btn">Criar Contest</button>
+        <button name="Registrar" class="btn">Criar Contest</button>
       </div>
 
-      Tempo de Contest
-      <div class="input-group">
-        <input type="text" placeholder="Ex.:5.0 (5 horas)" name="Tempo_duracao" value="" required>
-      </div>
-
-      Dificuldade
-      <div class="input-group">
-        <input type="number" placeholder="Dificuldade, valores entre 1-5" name="Dificuldade" value="" min="1" max="5" required>
-      </div>
-
-      Tempo penalidade
-
-      <div class="input-group">
-        <input type="text" placeholder="Ex.:0.20 (20minutos)" name="Tempo_penalidade" value="" required>
-      </div>
-
+      
       <table id="problemas">
         <tr>
-          <th>Codigo do Problema</th>
-          <th>Nome do Problema</th>
-          <th>Tema</th>
+          <th>Codigo do Contest</th>
+          <th>Tempo de duracao</th>
           <th>Dificuldade</th>
-          <th>Tags</th>
-          <th>Adicionar</th>
+          <th>by</th>
         </tr>
         <!-- PHP CODE TO FETCH DATA FROM ROWS -->
         <?php
@@ -119,12 +102,11 @@ if (isset($_POST['submit'])) {
           <tr>
             <!-- FETCHING DATA FROM EACH
 		ROW OF EVERY COLUMN -->
-            <td><?php echo $rows['Codigo_Exercicio']; ?></td>
-            <td><?php echo $rows['Nome_Exercicio']; ?></td>
-            <td><?php echo $rows['Tema']; ?></td>
-            <td><?php echo $rows['Dificuldade']; ?></td>
-            <td><?php echo $rows['Tags']; ?></td>
-            <td><input type="checkbox" name="problem[]" value="<?php echo $rows['Codigo_Exercicio']; ?> "></td>
+            <td><?php echo $rows['Codigo_Contest']; ?></td>
+            <td><?php echo $rows['Tempo_duracao']; ?></td>
+            <td><?php echo $rows['Dificuldade ']; ?></td>
+            <td><?php echo $rows['fk_Assinante_fk_Usuario_Nickname']; ?></td>
+            <td><input type="checkbox" name="contest[]" value="<?php echo $rows['Codigo_Exercicio']; ?> "></td>
           </tr>
         <?php
         }
