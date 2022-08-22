@@ -10,21 +10,49 @@ $sql = "SELECT * FROM exercicio";
 $result = mysqli_query($conn, $sql);
 
 if (isset($_POST['submit'])) {
-
-  $Codigo_Exercicio = $_POST['Codigo_Exercicio'];
-  $Nome_Exercicio = $_POST['Nome_Exercicio'];
-  $Tema = $_POST['Tema'];
-  $Enunciado = $_POST['Enunciado'];
+  $nickname = $_SESSION['nickname'];
+  $Tempo_duracao = $_POST['Tempo_duracao'];
+  $Tempo_penalidade = $_POST['Tempo_penalidade'];
+  $Editorial = "aqui";
   $Dificuldade = $_POST['Dificuldade'];
-  $Tags = $_POST['Tags'];
 
-  $sql = "INSERT INTO contest VALUES (DEFAULT, '$Nome_Exercicio', '$Tema', '$Enunciado', '$Dificuldade', '$Tags')";
-  // var_dump($sql);
+
+  $sql = "INSERT INTO contest VALUES (DEFAULT, '$Tempo_duracao', '$Dificuldade', '$Tempo_penalidade', '$Editorial', '$nickname')";
+
   $result = mysqli_query($conn, $sql);
 
+  $id = $conn->insert_id;
+
   if ($result) {
-    echo "<script>alert('yay! submissao enviada!')</script>";
-    header("Location: home.php");
+    var_dump($id);
+    $checkbox1 = $_POST['problem'];
+    $chk = "";
+    $flag = True;
+    foreach ($checkbox1 as $chk1) {
+      $sql = "INSERT INTO possui VALUES ('$chk1', '$id')";
+      $result = mysqli_query($conn, $sql);
+
+      if ($result != 1) {
+        echo '<script>alert("Failed To Insert")</script>';
+        foreach ($checkbox1 as $chk1) {
+          $sql = "DELETE from possui WHERE fk_Exercicio_Codigo = '$chk1' and fk_Contest_Codigo = '$id'";
+          $result = mysqli_query($conn, $sql);
+        }
+
+        $sql = "DELETE from contest WHERE Codigo_Contest = '$id'";
+        $result = mysqli_query($conn, $sql);
+        $flag = false;
+
+        break;
+      }
+    }
+
+    if ($flag == false) {
+      echo "<script>alert('Woops! Algo deu errado')</script>";
+    } else {
+      echo "<script>alert('yay! submissao enviada!')</script>";
+      header("Location: home.php");
+    }
   } else {
     echo "<script>alert('Woops! Algo deu errado')</script>";
   }
@@ -96,38 +124,13 @@ if (isset($_POST['submit'])) {
             <td><?php echo $rows['Tema']; ?></td>
             <td><?php echo $rows['Dificuldade']; ?></td>
             <td><?php echo $rows['Tags']; ?></td>
-            <td><input type="checkbox" name="problem[]" value= "<?php echo $rows['Codigo_Exercicio']; ?> "></td>
+            <td><input type="checkbox" name="problem[]" value="<?php echo $rows['Codigo_Exercicio']; ?> "></td>
           </tr>
         <?php
         }
         ?>
       </table>
     </form>
-    <?php
-    if (isset($_POST['submit'])) {
-      // $host = "localhost"; //host name  
-      // $username = "root"; //database username  
-      // $word = ""; //database word  
-      // $db_name = "sub_db"; //database name  
-      // $tbl_name = "request_quote"; //table name  
-      // $con = mysqli_connect("$host", "$username", "$word", "$db_name") or die("cannot connect"); //connection string  
-      
-      $checkbox1 = $_POST['problem'];
-      $chk = "";
-      foreach ($checkbox1 as $chk1) {
-        $chk .= $chk1 . ",";
-      }
-
-      $in_ch = mysqli_query($con, "insert into request_quote(technology) values ('$chk')");
-      if ($in_ch == 1) {
-        echo '<script>alert("Inserted Successfully")</script>';
-      } else {
-        echo '<script>alert("Failed To Insert")</script>';
-      }
-    }
-    ?>
-
-
   </div>
 </body>
 
