@@ -35,7 +35,7 @@ if (isset($_POST['Registrar'])) {
         echo "<script>alert('Woops! Algo deu errado')</script>";
     } else {
         echo "<script>alert('yay! submissao enviada!')</script>";
-        header("Location: home.php");
+        header("Location: register_to_contest.php");
     }
 }
 
@@ -65,7 +65,7 @@ if (isset($_POST['Registrar'])) {
 
         <form action="" method="POST" class="login-email" id="form_submission">
 
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Contests</p>
+            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Contests disponíveis</p>
 
             <div class="input-group">
                 <button name="Registrar" class="btn">Registrar em Contest</button>
@@ -97,7 +97,11 @@ if (isset($_POST['Registrar'])) {
                 }
                 ?>
             </table>
+               
         </form>
+        <div class = "login-email">
+            <button name="" class="btn" style="margin-top: 10px;" onclick="location.href = 'unregister_to_contest.php';">Remover</button>
+        </div> 
     </div>
 </body>
 
