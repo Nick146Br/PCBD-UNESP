@@ -35,6 +35,11 @@
         </div>
 
         <div class="input-group">
+            <button name="btnee" class="btn"
+            onclick="location.href = 'excluir_exercicio.php';">Excluir Exercicio</button>
+        </div>
+
+        <div class="input-group">
             <button name="btniu" class="btn"
             onclick="location.href = 'register.php';">Registrar Usuario</button>
         </div>
