@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     $Tags = $_POST['Tags'];
 
     $sql = "INSERT INTO Exercicio VALUES (DEFAULT, '$Nome_Exercicio', '$Tema', '$Enunciado', '$Dificuldade', '$Tags')";
-	var_dump($sql);
+	// var_dump($sql);
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
