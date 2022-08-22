@@ -19,6 +19,14 @@ function  createConfirmationmbox(){
     echo'</script>';
 }
 
+function  createConfirmationmbox1(){
+    echo'<script>';
+	echo'var userPreference;';
+    echo'alert("Usuario Alterado!!");';
+    echo'document.location.href = "home.php";';
+    echo'</script>';
+}
+
 if (isset($_POST['submit'])) {
 	$nickname = $_SESSION['nickname'];
 	$email = $_POST['email'];
@@ -37,7 +45,7 @@ if (isset($_POST['submit'])) {
 			// echo "<script>alert('Wow! User Registration Incompleted.')</script>";
 		$cep = preg_replace("/[^0-9]/", "", $cep);
 		$sql = "UPDATE usuario SET Email = '$email', Idade = '$idade', Nacionalidade = '$nacionalidade', Instituicao_Ensino = '$instituicao', Tamanho_camiseta = '$tamanho_camiseta', CEP = '$cep', Rua = '$rua', Bairro = '$bairro', Cidade = '$cidade', senha = '$senha' WHERE Nickname = '$nickname'";
-		var_dump($sql);
+		// var_dump($sql);
 		$result = mysqli_query($conn, $sql);
 		// var_dump($result);
 		// if ($result) {
@@ -49,6 +57,10 @@ if (isset($_POST['submit'])) {
 	} else {
 		echo "<script>alert('Password Not Matched.')</script>";
 	}
+}
+if (isset($_POST['premium'])) {
+	$sql = "UPDATE usuario SET Email = '$email', Idade = '$idade', Nacionalidade = '$nacionalidade', Instituicao_Ensino = '$instituicao', Tamanho_camiseta = '$tamanho_camiseta', CEP = '$cep', Rua = '$rua', Bairro = '$bairro', Cidade = '$cidade', senha = '$senha' WHERE Nickname = '$nickname'";
+	
 }
 
 ?>
@@ -117,6 +129,9 @@ if (isset($_POST['submit'])) {
 			</div>
 			<div class="input-group">
 				<button name="submit" class="btn">Alterar</button>
+			</div>
+			<div class="input-group">
+				<button name="premium" class="btn" style="margin-top:10px;" >Tornar-se Assinante </button>
 			</div>
 			<p class="login-register-text">Não quer mais alterar o usuario? <a href="home.php">Clique Aqui</a>.</p>
 			</div>

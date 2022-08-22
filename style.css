@@ -160,7 +160,9 @@ body {
     }
 }
 
-
+.logout {
+    /* text-align: center; */
+}
 
 /*Tabelas*/
 #problemas {

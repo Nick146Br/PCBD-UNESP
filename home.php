@@ -47,8 +47,9 @@
             onclick="location.href = 'alterar_usuario.php';">Alterar Usuario</button>
             <button name="btniretoco" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'register_to_contest.php';">Registrar em um Contest</button>
-            
-            <a href="index.php" altstyle= "align-items: flex-end;">Logout</a>
+            <button name="btnamigo" class="btn" style="margin-top: 10px;"
+            onclick="location.href = 'adicionar_amigo.php';">Adicionar Amigos</button>
+            <a class="logout" href="index.php">Logout</a>
             
         </div>
     </div>
