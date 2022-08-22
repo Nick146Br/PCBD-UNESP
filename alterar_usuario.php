@@ -11,8 +11,16 @@ session_start();
 //     header("Location: index.php");
 // }
 
+function  createConfirmationmbox(){
+    echo'<script>';
+	echo'var userPreference;';
+    echo'alert("Usuario Alterado!!");';
+    echo'document.location.href = "home.php";';
+    echo'</script>';
+}
+
 if (isset($_POST['submit'])) {
-	$nickname = $_POST['nickname'];
+	$nickname = $_SESSION['nickname'];
 	$email = $_POST['email'];
 	$idade = $_POST['idade'];
 	$nacionalidade = $_POST['nacionalidade'];
@@ -26,27 +34,17 @@ if (isset($_POST['submit'])) {
 	$csenha = md5($_POST['csenha']);
 
 	if ($senha == $csenha) {
-
-		$sql = "SELECT * FROM usuario WHERE Nickname='$nickname'";
-		$result = mysqli_query($conn, $sql);
-		
-		// var_dump($result);
-		if ($result->num_rows == 0) {
 			// echo "<script>alert('Wow! User Registration Incompleted.')</script>";
-
-			$cep = preg_replace("/[^0-9]/", "", $cep);
-			$sql = "INSERT INTO `usuario`(`Nickname`, `Email`, `Idade`, `Nacionalidade`, `Instituicao_Ensino`, `Tamanho_Camiseta`, `CEP`, `Rua`, `Bairro`, `Cidade`, `senha`) VALUES ('$nickname', '$email', '$idade' ,'$nacionalidade', '$instituicao', '$tamanho_camiseta', '$cep', '$rua', '$bairro', '$cidade', '$senha')";
-			// var_dump($sql);
-			$result = mysqli_query($conn, $sql);
-			// var_dump($result);
-			if ($result) {
-				echo "<script>alert('Wow! User Registration Completed.')</script>";
-			} else {
-				echo "<script>alert('Woops! Something Wrong Went.')</script>";
-			}
-		} else {
-			echo "<script>alert('Woops! Email Already Exists.')</script>";
-		}
+		$cep = preg_replace("/[^0-9]/", "", $cep);
+		$sql = "UPDATE usuario SET Email = '$email', Idade = '$idade', Nacionalidade = '$nacionalidade', Instituicao_Ensino = '$instituicao', Tamanho_camiseta = '$tamanho_camiseta', CEP = '$cep', Rua = '$rua', Bairro = '$bairro', Cidade = '$cidade', senha = '$senha' WHERE Nickname = '$nickname'";
+		var_dump($sql);
+		$result = mysqli_query($conn, $sql);
+		// var_dump($result);
+		// if ($result) {
+		// 	createConfirmationmbox();
+		// } else {
+		// 	echo "<script>alert('Woops! Algo deu errado.')</script>";
+		// }
 		
 	} else {
 		echo "<script>alert('Password Not Matched.')</script>";
@@ -118,7 +116,7 @@ if (isset($_POST['submit'])) {
                 </select>
 			</div>
 			<div class="input-group">
-				<button name="submit" class="btn">Register</button>
+				<button name="submit" class="btn">Alterar</button>
 			</div>
 			<p class="login-register-text">Não quer mais alterar o usuario? <a href="home.php">Clique Aqui</a>.</p>
 			</div>

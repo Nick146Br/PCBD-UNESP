@@ -51,7 +51,7 @@
 
         <div class="input-group">
             <button name="btnis" class="btn"
-            onclick="location.href = 'submissao.php';">Submeer Solucao</button>
+            onclick="location.href = 'submissao.php';">Submeter Solucao</button>
         </div>
 
         <div class="input-group">
@@ -63,7 +63,7 @@
             <button name="btnial" class="btn"
             onclick="location.href = 'alterar_usuario.php';">Alterar Usuario</button>
         </div>
-
+        <a href="index.php">Logout</a>
 	</div>
 </body>
 </html>

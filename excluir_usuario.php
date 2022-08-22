@@ -5,25 +5,34 @@ include 'config.php';
 error_reporting(0);
 
 session_start();
+  
 
 // if (isset($_SESSION['nickname'])) {
 //     header("Location: index.php");
 // }
 // header("Location: index.php");
+
+function  createConfirmationmbox(){
+    echo'<script>';
+	echo'var userPreference;';
+    echo'alert("Usuario Excluido!!");';
+    echo'document.location.href = "index.php";';
+    echo'</script>';
+}
+  
+
 if (isset($_POST['sim'])) {
+
 	$nickname = $_SESSION['nickname'];
 
     $sql = "DELETE FROM usuario WHERE Nickname = '$nickname'";
-    // var_dump($sql);
-    $result = mysqli_query($conn, $sql);
+
     
-    if ($result){
-        // header("Location: index.php");
-        echo "<script>alert('Voce excluiu sua conta!!')</script>";
+    $result = mysqli_query($conn, $sql);
+    if($result){
+        createConfirmationmbox();
     }
-    else{
-        echo "<script>alert('Woops! Algo deu errao.')</script>";
-    }
+    else header("Location: home.php");
 }
 if (isset($_POST['nao'])) {
     header("Location: home.php");
