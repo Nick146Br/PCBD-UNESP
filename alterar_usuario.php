@@ -41,12 +41,11 @@ if (isset($_POST['submit'])) {
 			// var_dump($result);
 			if ($result) {
 				echo "<script>alert('Wow! User Registration Completed.')</script>";
-				// header("Location: index.php");
 			} else {
 				echo "<script>alert('Woops! Something Wrong Went.')</script>";
 			}
 		} else {
-			echo "<script>alert('Woops! NickName already exists.')</script>";
+			echo "<script>alert('Woops! Email Already Exists.')</script>";
 		}
 		
 	} else {
@@ -72,10 +71,8 @@ if (isset($_POST['submit'])) {
 	<div class="container" style = "overflow: auto; height: 600px; width: 500px">
 		<form action="" method="POST" class="login-email">
 			
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
-			<div class="input-group">
-				<input type="text" placeholder="Nickname" name="nickname" value="<?php echo $username; ?>" required>
-			</div>
+            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Alterar Usuario</p>
+
 			<div class="input-group">
 				<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
 			</div>
@@ -123,7 +120,7 @@ if (isset($_POST['submit'])) {
 			<div class="input-group">
 				<button name="submit" class="btn">Register</button>
 			</div>
-			<p class="login-register-text">Have an account? <a href="index.php">Login Here</a>.</p>
+			<p class="login-register-text">Não quer mais alterar o usuario? <a href="home.php">Clique Aqui</a>.</p>
 			</div>
 		</form>
 	</div>

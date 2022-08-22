@@ -49,6 +49,16 @@
             onclick="location.href = 'submissao.php';">Submeer Solucao</button>
         </div>
 
+        <div class="input-group">
+            <button name="btnieu" class="btn"
+            onclick="location.href = 'excluir_usuario.php';">Excluir Usuario</button>
+        </div>
+
+        <div class="input-group">
+            <button name="btnial" class="btn"
+            onclick="location.href = 'alterar_usuario.php';">Alterar Usuario</button>
+        </div>
+
 	</div>
 </body>
 </html>
