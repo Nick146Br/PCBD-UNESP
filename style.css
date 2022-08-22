@@ -118,25 +118,6 @@ body {
     border-color: #a29bfe;
 }
 
-.btn1{
-    display: block;
-    width: 100%;
-    padding: 15px 20px;
-    text-align: center;
-    border: none;
-    background: #a29bfe;
-    outline: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    color: #FFF;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.btn1{
-    transform: translateY(-5px);
-    background: #6c5ce7;
-}
 .container .login-email .input-group .btn {
     display: block;
     width: 100%;

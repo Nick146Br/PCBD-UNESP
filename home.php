@@ -28,46 +28,32 @@
 		<p class="login-text" style="font-size: 2rem; font-weight: 800;">Sistemas LPC</p>
         
         O que deseja Fazer?<br>
-
+        
+    <div class="login-email">
         <div class="input-group">
-            <button name="btnie" class="btn"
+            <button name="btnie" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'register_problem.php';">Registrar Exercicio</button>
-        </div>
-
-        <div class="input-group">
-            <button name="btnee" class="btn"
+            <button name="btnee" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'excluir_exercicio.php';">Excluir Exercicio</button>
-        </div>
-
-        <div class="input-group">
-            <button name="btniu" class="btn"
+            <button name="btniu" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'register.php';">Registrar Usuario</button>
-        </div>
-
-        <div class="input-group">
-            <button name="btnic" class="btn"
+            <button name="btnic" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'register_contest.php';">Registrar Contest</button>
-        </div>
-
-        <div class="input-group">
-            <button name="btnis" class="btn"
+            <button name="btnis" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'submissao.php';">Submeter Solucao</button>
-        </div>
-
-        <div class="input-group">
-            <button name="btnieu" class="btn"
+            <button name="btnieu" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'excluir_usuario.php';">Excluir Usuario</button>
-        </div>
-
-        <div class="input-group">
-            <button name="btnial" class="btn"
+            <button name="btnial" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'alterar_usuario.php';">Alterar Usuario</button>
-        </div>
-        <div class="input-group">
-            <button name="btniretoco" class="btn"
+            <button name="btniretoco" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'register_to_contest.php';">Registrar em um Contest</button>
+            
+            <a href="index.php" altstyle= "align-items: flex-end;">Logout</a>
+            
         </div>
-        <a href="index.php">Logout</a>
+    </div>
+
+        
 	</div>
 </body>
 </html>

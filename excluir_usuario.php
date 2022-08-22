@@ -54,12 +54,12 @@ if (isset($_POST['nao'])) {
 </head>
 
 <body>
-<div class="container" style = "overflow: auto; width: 500px">
+<div class="container" style = "overflow: auto; width: 500px, display: flex">
 <p class="login-text" style="font-size: 2rem; font-weight: 800;">Deseja Excluir o Usuário? </p>
     <form action="" method="POST" class="login-email">
     <div class="input-group" id="excluir">
-        <button name="sim" action="" method="POST" class="btn1">Sim</button>
-        <button name="nao" action="" method="POST" class="btn1">Nao</button>
+        <button name="sim" action="" method="POST" class="btn" style = "margin-top: 10px;">Sim</button>
+        <button name="nao" action="" method="POST" class="btn" style = "margin-top: 10px;">Nao</button>
     </div>
     </form>
     <!-- <p class="login-register-text">Não quer excluir o usuário <a href="home.php">Clique aqui</a>.</p> -->
