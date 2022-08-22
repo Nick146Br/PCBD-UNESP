@@ -6,9 +6,9 @@ error_reporting(0);
 
 session_start();
 
-if (isset($_SESSION['nickname'])) {
-    header("Location: index.php");
-}
+// if (isset($_SESSION['nickname'])) {
+//     header("Location: index.php");
+// }
 // header("Location: index.php");
 if (isset($_POST['sim'])) {
 	$nickname = $_SESSION['nickname'];
@@ -18,7 +18,7 @@ if (isset($_POST['sim'])) {
     $result = mysqli_query($conn, $sql);
     
     if ($result){
-        header("Location: index.php");
+        // header("Location: index.php");
         echo "<script>alert('Voce excluiu sua conta!!')</script>";
     }
     else{
