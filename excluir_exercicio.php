@@ -81,6 +81,10 @@ if (isset($_POST['excluir'])) {
 </head>
 
 <body>
+
+<button class = "button-1" role="button"
+onclick="location.href = 'home.php';"> HOME </button>
+
 <div class="container" style = "overflow: auto;">
 <p class="login-text" style="font-size: 2rem; font-weight: 800;">Remoção de exercícios</p>
 

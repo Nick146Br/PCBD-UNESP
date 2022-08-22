@@ -57,6 +57,8 @@ if (isset($_POST['Registrar'])) {
 </head>
 
 <body>
+<button class = "button-1" role="button"
+    onclick="location.href = 'home.php';"> HOME </button>
     <div class="container" id="cad_submissao" style="min-width: 400px; height: 800px">
 
         <form action="" method="POST" class="login-email" id="form_submission">

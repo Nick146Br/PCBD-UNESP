@@ -15,27 +15,26 @@ session_start();
 function  createConfirmationmbox(){
     echo'<script>';
 	echo'var userPreference;';
-    echo'alert("Usuario Excluido!!");';
-    echo'document.location.href = "index.php";';
+    echo'alert("Nós Agradecemos Pela Assinatura !!");';
+    echo'document.location.href = "home.php";';
     echo'</script>';
 }
   
 
-if (isset($_POST['sim'])) {
+if (isset($_POST['submit'])) {
 
 	$nickname = $_SESSION['nickname'];
+    $tempo_assinatura = $_POST['tempo_assinatura'];
 
-    $sql = "DELETE FROM usuario WHERE Nickname = '$nickname'";
+    $sql = "INSERT INTO `assinante`(`tempo_Assinatura`, `fk_Usuario_Nickname`) VALUES ('$tempo_assinatura', '$nickname')";
+    var_dump($sql);
 
-    
     $result = mysqli_query($conn, $sql);
+
     if($result){
         createConfirmationmbox();
     }
     else header("Location: home.php");
-}
-if (isset($_POST['nao'])) {
-    header("Location: home.php");
 }
 ?>
 
@@ -54,14 +53,21 @@ if (isset($_POST['nao'])) {
 </head>
 
 <body>
-<button class = "button-1" role="button"
+    <button class = "button-1" role="button"
     onclick="location.href = 'home.php';"> HOME </button>
-<div class="container" style = "overflow: auto; width: 500px, display: flex">
-<p class="login-text" style="font-size: 2rem; font-weight: 800;">Deseja Excluir o Usuário? </p>
+    <div class="container" style = "overflow: auto; width: 500px, display: flex">
+    <p class="login-text" style="font-size: 2rem; font-weight: 800;">Deseja Se Tornar um Assinante? </p>
     <form action="" method="POST" class="login-email">
-    <div class="input-group" id="excluir">
-        <button name="sim" action="" method="POST" class="btn" style = "margin-top: 10px;">Sim</button>
-        <button name="nao" action="" method="POST" class="btn" style = "margin-top: 10px;">Nao</button>
+    <div class="input-group">
+        <select name="tempo_assinatura" id="time" required class="select">
+            <option value="30">Um Mês</option>
+            <option value="60">Dois Meses</option>
+            <option value="90">Três Meses</option>
+            <option value="120">Quatro Meses</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <button name="submit" class="btn">Obter Assinatura</button>
     </div>
     </form>
     <!-- <p class="login-register-text">Não quer excluir o usuário <a href="home.php">Clique aqui</a>.</p> -->

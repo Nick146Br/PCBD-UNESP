@@ -69,6 +69,8 @@ if (isset($_POST['submit'])) {
 	<title>Register Form - Pure Coding</title>
 </head>
 <body>
+<button class = "button-1" role="button"
+    onclick="location.href = 'home.php';"> HOME </button>
 	<div class="container" style = "overflow: auto; height: 600px; width: 500px">
 		<form action="" method="POST" class="login-email">
 			

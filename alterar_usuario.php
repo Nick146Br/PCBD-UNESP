@@ -19,13 +19,6 @@ function  createConfirmationmbox(){
     echo'</script>';
 }
 
-function  createConfirmationmbox1(){
-    echo'<script>';
-	echo'var userPreference;';
-    echo'alert("Usuario Alterado!!");';
-    echo'document.location.href = "home.php";';
-    echo'</script>';
-}
 
 if (isset($_POST['submit'])) {
 	$nickname = $_SESSION['nickname'];
@@ -42,26 +35,23 @@ if (isset($_POST['submit'])) {
 	$csenha = md5($_POST['csenha']);
 
 	if ($senha == $csenha) {
-			// echo "<script>alert('Wow! User Registration Incompleted.')</script>";
+	
 		$cep = preg_replace("/[^0-9]/", "", $cep);
 		$sql = "UPDATE usuario SET Email = '$email', Idade = '$idade', Nacionalidade = '$nacionalidade', Instituicao_Ensino = '$instituicao', Tamanho_camiseta = '$tamanho_camiseta', CEP = '$cep', Rua = '$rua', Bairro = '$bairro', Cidade = '$cidade', senha = '$senha' WHERE Nickname = '$nickname'";
-		// var_dump($sql);
+	
 		$result = mysqli_query($conn, $sql);
-		// var_dump($result);
-		// if ($result) {
-		// 	createConfirmationmbox();
-		// } else {
-		// 	echo "<script>alert('Woops! Algo deu errado.')</script>";
-		// }
+	
+		if ($result) {
+			createConfirmationmbox();
+		} else {
+			echo "<script>alert('Woops! Algo deu errado.')</script>";
+		}
 		
 	} else {
 		echo "<script>alert('Password Not Matched.')</script>";
 	}
 }
-if (isset($_POST['premium'])) {
-	$sql = "UPDATE usuario SET Email = '$email', Idade = '$idade', Nacionalidade = '$nacionalidade', Instituicao_Ensino = '$instituicao', Tamanho_camiseta = '$tamanho_camiseta', CEP = '$cep', Rua = '$rua', Bairro = '$bairro', Cidade = '$cidade', senha = '$senha' WHERE Nickname = '$nickname'";
-	
-}
+
 
 ?>
 
@@ -78,6 +68,8 @@ if (isset($_POST['premium'])) {
 	<title>Register Form - Pure Coding</title>
 </head>
 <body>
+	<button class = "button-1" role="button"
+    onclick="location.href = 'home.php';"> HOME </button>
 	<div class="container" style = "overflow: auto; height: 600px; width: 500px">
 		<form action="" method="POST" class="login-email">
 			
@@ -129,9 +121,6 @@ if (isset($_POST['premium'])) {
 			</div>
 			<div class="input-group">
 				<button name="submit" class="btn">Alterar</button>
-			</div>
-			<div class="input-group">
-				<button name="premium" class="btn" style="margin-top:10px;" >Tornar-se Assinante </button>
 			</div>
 			<p class="login-register-text">Não quer mais alterar o usuario? <a href="home.php">Clique Aqui</a>.</p>
 			</div>
