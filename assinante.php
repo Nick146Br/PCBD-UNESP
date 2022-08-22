@@ -19,6 +19,14 @@ function  createConfirmationmbox(){
     echo'document.location.href = "home.php";';
     echo'</script>';
 }
+function  createConfirmationmbox1(){
+    echo'<script>';
+	echo'var userPreference;';
+    echo'alert("Você já é assinante!!");';
+    echo'document.location.href = "home.php";';
+    echo'</script>';
+}
+  
   
 
 if (isset($_POST['submit'])) {
@@ -26,15 +34,20 @@ if (isset($_POST['submit'])) {
 	$nickname = $_SESSION['nickname'];
     $tempo_assinatura = $_POST['tempo_assinatura'];
 
-    $sql = "INSERT INTO `assinante`(`tempo_Assinatura`, `fk_Usuario_Nickname`) VALUES ('$tempo_assinatura', '$nickname')";
-    
-    $result = mysqli_query($conn, $sql);
+    $sql1 = "SELECT fk_Usuario_Nickname from assinante where fk_Usuario_Nickname = '$nickname'";
+    $result = mysqli_query($conn, $sql1);
     // var_dump($result);
-    
-    if($result){
+
+    if($result->num_rows > 0){
+        createConfirmationmbox1();
+    }
+    else{
+        $sql = "INSERT INTO `assinante`(`tempo_Assinatura`, `fk_Usuario_Nickname`) VALUES ('$tempo_assinatura', '$nickname')";
+
+        $result = mysqli_query($conn, $sql);
+
         createConfirmationmbox();
     }
-    else header("Location: home.php");
 }
 ?>
 

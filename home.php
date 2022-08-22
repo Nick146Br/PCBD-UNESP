@@ -45,8 +45,8 @@
             onclick="location.href = 'register_problem.php';">Registrar Exercicio</button>
             <button name="btnee" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'excluir_exercicio.php';">Excluir Exercicio</button>
-            <button name="btniu" class="btn" style="margin-top: 10px;"
-            onclick="location.href = 'register.php';">Registrar Usuario</button>
+            <!-- <button name="btniu" class="btn" style="margin-top: 10px;"
+            onclick="location.href = 'register.php';">Registrar Usuario</button> -->
             <button name="btnic" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'register_contest.php';">Registrar Contest</button>
             <button name="btnis" class="btn" style="margin-top: 10px;"
