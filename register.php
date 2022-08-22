@@ -7,9 +7,9 @@ error_reporting(0);
 
 session_start();
 
-// if (isset($_SESSION['nickname'])) {
-//     header("Location: index.php");
-// }
+if (isset($_SESSION['nickname'])) {
+    header("Location: index.php");
+}
 
 if (isset($_POST['submit'])) {
 	$nickname = $_POST['nickname'];

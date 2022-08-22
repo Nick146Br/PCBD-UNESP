@@ -27,10 +27,10 @@ if (isset($_POST['submit'])) {
     $tempo_assinatura = $_POST['tempo_assinatura'];
 
     $sql = "INSERT INTO `assinante`(`tempo_Assinatura`, `fk_Usuario_Nickname`) VALUES ('$tempo_assinatura', '$nickname')";
-    var_dump($sql);
-
+    
     $result = mysqli_query($conn, $sql);
-
+    // var_dump($result);
+    
     if($result){
         createConfirmationmbox();
     }

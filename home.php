@@ -32,7 +32,7 @@
     onclick="location.href = 'home.php';"> HOME </button>
 
 
-	<div class="container" id="cad_submissao" style="min-width: 400px; height: 800px;">
+	<div class="container" id="cad_submissao" style="min-width: 400px; height: 800px; overflow: auto;">
 		<p class="login-text" style="font-size: 2rem; font-weight: 800;">Sistemas LPC</p>
         
         O que deseja Fazer?<br>
