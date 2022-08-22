@@ -63,6 +63,10 @@
             <button name="btnial" class="btn"
             onclick="location.href = 'alterar_usuario.php';">Alterar Usuario</button>
         </div>
+        <div class="input-group">
+            <button name="btniretoco" class="btn"
+            onclick="location.href = 'register_to_contest.php';">Registrar em um Contest</button>
+        </div>
         <a href="index.php">Logout</a>
 	</div>
 </body>
