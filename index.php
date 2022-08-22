@@ -46,10 +46,10 @@ if (isset($_POST['submit'])) {
 		<form action="" method="POST" class="login-email">
 			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
 			<div class="input-group">
-				<input type="nickname" placeholder="NickName" name="nickname" required>
+				<input type="username" placeholder="NickName" name="nickname" required>
 			</div>
 			<div class="input-group">
-				<input type="senha" placeholder="Senha" name="senha" required>
+				<input type="password" placeholder="Senha" name="senha" required>
 			</div>
 			<div class="input-group">
 				<button name="submit" class="btn">Login</button>

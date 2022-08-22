@@ -9,7 +9,7 @@ CREATE TABLE Usuario (
     Rua VARCHAR(20),
     Bairro VARCHAR(20),
     Cidade VARCHAR(20),
-    Senha VARCHAR(32),
+    Senha VARCHAR(32)
 );
 
 CREATE TABLE Exercicio (
