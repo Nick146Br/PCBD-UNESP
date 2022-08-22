@@ -1,4 +1,4 @@
-<?php 
+<?php
 // ini_set ('display_errors', 1);
 
 include 'config.php';
@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
 
 		$sql = "SELECT * FROM usuario WHERE Nickname='$nickname'";
 		$result = mysqli_query($conn, $sql);
-		
+
 		// var_dump($result);
 		if ($result->num_rows == 0) {
 			// echo "<script>alert('Wow! User Registration Incompleted.')</script>";
@@ -47,7 +47,6 @@ if (isset($_POST['submit'])) {
 		} else {
 			echo "<script>alert('Woops! Email Already Exists.')</script>";
 		}
-		
 	} else {
 		echo "<script>alert('Password Not Matched.')</script>";
 	}
@@ -57,6 +56,7 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,11 +67,12 @@ if (isset($_POST['submit'])) {
 
 	<title>Register Form - Pure Coding</title>
 </head>
+
 <body>
-	<div class="container" style = "overflow: auto; height: 600px; width: 500px">
+	<div class="container" style="overflow: auto; height: 600px; width: 500px">
 		<form action="" method="POST" class="login-email">
-			
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
+
+			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
 			<div class="input-group">
 				<input type="text" placeholder="Nickname" name="nickname" value="<?php echo $username; ?>" required>
 			</div>
@@ -80,8 +81,8 @@ if (isset($_POST['submit'])) {
 			</div>
 			<div class="input-group">
 				<input type="password" placeholder="Password" name="senha" value="<?php echo $_POST['senha']; ?>" required>
-            </div>
-            <div class="input-group">
+			</div>
+			<div class="input-group">
 				<input type="password" placeholder="Confirm Password" name="csenha" value="<?php echo $_POST['csenha']; ?>" required>
 			</div>
 			<div class="input-group">
@@ -89,18 +90,18 @@ if (isset($_POST['submit'])) {
 			</div>
 			<div class="input-group">
 				<select name="nacionalidade" id="Nacionalidade" required>
-                    <option value="BRA">Brasil</option>
-                    <option value="EUA">EUA</option>
-                    <option value="CHN">China</option>
-                    <option value="JPN">Japão</option>
-                    <option value="SWE">Suécia</option>
-                </select>
+					<option value="BRA">Brasil</option>
+					<option value="EUA">EUA</option>
+					<option value="CHN">China</option>
+					<option value="JPN">Japão</option>
+					<option value="SWE">Suécia</option>
+				</select>
 			</div>
 			<div class="input-group">
-				<input type="text" placeholder="CEP" name="cep"  required>
+				<input type="text" placeholder="CEP" name="cep" required>
 			</div>
 			<div class="input-group">
-				<input type="text" placeholder="Cidade" name="cidade"  required>
+				<input type="text" placeholder="Cidade" name="cidade" required>
 			</div>
 			<div class="input-group">
 				<input type="text" placeholder="Bairro" name="bairro" required>
@@ -113,18 +114,19 @@ if (isset($_POST['submit'])) {
 			</div>
 			<div class="input-group">
 				<select name="tamanho_camiseta" id="camiseta" required>
-                    <option value="P">Pequena</option>
-                    <option value="M">Média</option>
-                    <option value="G">Grande</option>
-                    <option value="GG">Extra Grande</option>
-                </select>
+					<option value="P">Pequena</option>
+					<option value="M">Média</option>
+					<option value="G">Grande</option>
+					<option value="GG">Extra Grande</option>
+				</select>
 			</div>
 			<div class="input-group">
 				<button name="submit" class="btn">Register</button>
 			</div>
 			<p class="login-register-text">Have an account? <a href="index.php">Login Here</a>.</p>
-			</div>
-		</form>
+	</div>
+	</form>
 	</div>
 </body>
+
 </html>

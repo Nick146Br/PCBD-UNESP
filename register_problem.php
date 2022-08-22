@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
 
     if ($result) {
         echo "<script>alert('yay! submissao enviada!')</script>";
+        header("Location: home.php");
     } else {
         echo "<script>alert('Woops! Algo deu errado')</script>";
     }
