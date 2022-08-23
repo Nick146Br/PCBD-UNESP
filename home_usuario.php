@@ -39,13 +39,12 @@
         
     <div class="login-email">
         <div class="input-group">
-        <button name="btnassinante" class="btn" style="margin-top: 10px;"
+
+            <button name="btnassinante" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'assinante.php';">Obter Assinatura Premium</button>
+
             <button name="btprofile" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'profile.php';">Profile</button>
-        
-            <!-- <button name="btniu" class="btn" style="margin-top: 10px;"
-            onclick="location.href = 'register.php';">Registrar Usuario</button> -->
            
             <button name="btnial" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'alterar_usuario.php';">Alterar Usuario</button>
@@ -55,7 +54,7 @@
             
             <button name="btnieu" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'excluir_usuario.php';">Excluir Usuario</button>
-            
+
             <a class="voltar" href="home.php">Voltar</a>
         </div>
     </div>
