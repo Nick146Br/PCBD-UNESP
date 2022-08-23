@@ -35,7 +35,6 @@ if (isset($_POST['add'])) {
         $result = mysqli_query($conn, $sql);
         echo "<script>alert('You Unfollow $user')</script>";
     }
-
 }
 
 ?>
