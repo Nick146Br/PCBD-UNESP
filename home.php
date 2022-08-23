@@ -44,7 +44,7 @@
             onclick="location.href = 'home_contest.php';">Contest</button>
             <button name="btnexercicios" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'home_exercicio.php';">Exercicios</button>
-            <a class="logout" href="index.php">Logout</a>
+            <a style="margin-top: 15px;"class="logout" href="index.php">Logout</a>
             
         </div>
     </div>
