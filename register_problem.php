@@ -10,6 +10,14 @@ if (!isset($_SESSION['nickname'])) {
     header("Location: index.php");
 }
 
+function  createConfirmationmbox(){
+    echo'<script>';
+	echo'var userPreference;';
+    echo'alert("Seu exercicio foi registrado!!");';
+    echo'document.location.href = "home.php";';
+    echo'</script>';
+}
+
 if (isset($_POST['submit'])) {
 	
     $Codigo_Exercicio = $_POST['Codigo_Exercicio'];
@@ -24,8 +32,7 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-        echo "<script>alert('yay! submissao enviada!')</script>";
-        header("Location: home.php");
+        createConfirmationmbox();
     } else {
         echo "<script>alert('Woops! Algo deu errado')</script>";
     }
