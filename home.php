@@ -32,7 +32,7 @@
     onclick="location.href = 'home.php';"> HOME </button>
 
 
-	<div class="container" id="cad_submissao" style="min-width: 400px; min-height: 370px; height: auto; overflow: auto;">
+	<div class="container" id="cad_submissao" style="min-width: 400px; min-height: 430px; height: auto; overflow: auto;">
 		<p class="login-text" style="font-size: 2rem; font-weight: 800;">Sistemas LPC</p>
         
         
@@ -44,6 +44,8 @@
             onclick="location.href = 'home_contest.php';">Contest</button>
             <button name="btnexercicios" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'home_exercicio.php';">Exercicios</button>
+            <button name="btnest" class="btn" style="margin-top: 10px;"
+            onclick="location.href = 'estatistica.php';">Estatisticas</button>
             <a style="margin-top: 15px;"class="logout" href="index.php">Logout</a>
             
         </div>

@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
 <body>
     <button class = "button-1" role="button"
     onclick="location.href = 'home.php';"> HOME </button>
-    <div class="container" style = "overflow: auto; width: 500px, display: flex">
+    <div class="container" style = "overflow: auto; width: 500px, display: flex; min-height: 200px;">
     <p class="login-text" style="font-size: 2rem; font-weight: 800;">Deseja Se Tornar um Assinante? </p>
     <form action="" method="POST" class="login-email">
     <div class="input-group">
