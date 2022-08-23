@@ -6,7 +6,7 @@ session_start();
 
 error_reporting(0);
 $nickname = $_SESSION['nickname'];
-$sql = "SELECT Codigo_Contest FROM contest WHERE Codigo_Contest IN (SELECT DISTINCT fk_Contest_Codigo from registra where fk_Usuario_Nickname ='$nickname')";
+$sql = "SELECT * FROM contest WHERE Codigo_Contest IN (SELECT DISTINCT fk_Contest_Codigo from registra where fk_Usuario_Nickname ='$nickname')";
 $result = mysqli_query($conn, $sql);
 
 if (isset($_POST['Registrar'])) {
