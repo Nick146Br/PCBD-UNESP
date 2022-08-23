@@ -27,7 +27,7 @@ $result3 = mysqli_query($conn, $sql);
 
   <link rel="stylesheet" type="text/css" href="style.css" />
 
-  <title>Submissão de Exercicio</title>
+  <title>Profile</title>
 
 
 </head>

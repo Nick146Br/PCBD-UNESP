@@ -21,7 +21,7 @@
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title>Submissão de Exercicio</title>
+	<title>Contests</title>
 </head>
 <body>
     <!-- <div class="header">

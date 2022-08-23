@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title>Register Form - Pure Coding</title>
+	<title>Register Form</title>
 </head>
 <body>
 <!-- <button class = "button-1" role="button"

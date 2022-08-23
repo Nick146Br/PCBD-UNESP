@@ -50,7 +50,7 @@ if (isset($_POST['add'])) {
 
     <link rel="stylesheet" type="text/css" href="style.css" />
 
-    <title>Contest</title>
+    <title>Adicionar Amigo</title>
 
 
 </head>

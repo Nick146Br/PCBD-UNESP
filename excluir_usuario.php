@@ -50,7 +50,7 @@ if (isset($_POST['nao'])) {
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title>Register Form - Pure Coding</title>
+	<title>Excluir Usuario</title>
 </head>
 
 <body>

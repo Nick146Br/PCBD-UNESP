@@ -84,7 +84,7 @@ if (isset($_POST['submit'])) {
 
   <link rel="stylesheet" type="text/css" href="style.css" />
 
-  <title>Submissão de Exercicio</title>
+  <title>Criar Contest</title>
 
 
 </head>

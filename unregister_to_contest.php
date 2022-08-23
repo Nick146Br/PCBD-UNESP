@@ -51,7 +51,7 @@ if (isset($_POST['Registrar'])) {
 
     <link rel="stylesheet" type="text/css" href="style.css" />
 
-    <title>Contest</title>
+    <title>Esquecer Contest</title>
 
 
 </head>
