@@ -16,7 +16,7 @@ $nickname = $_SESSION['nickname'];
   if($result->num_rows == 0){
     echo'<script>';
     echo'var userPreference;';
-    echo'alert("Precisa ser assinante para criar um contest !!");';
+    echo'alert("Precisa ser assinante para alterar um contest !!");';
     echo'document.location.href = "home_contest.php";';
     echo'</script>';
   }
