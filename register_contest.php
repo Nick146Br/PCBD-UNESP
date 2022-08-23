@@ -15,7 +15,7 @@ error_reporting(0);
     echo'<script>';
     echo'var userPreference;';
     echo'alert("Precisa ser assinante para criar um contest !!");';
-    echo'document.location.href = "home.php";';
+    echo'document.location.href = "home_contest.php";';
     echo'</script>';
   }
 
