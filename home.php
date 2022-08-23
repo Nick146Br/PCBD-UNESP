@@ -41,7 +41,7 @@
             <button name="btnexercicios" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'home_exercicio.php';">Exercicios</button>
             <button name="btnest" class="btn" style="margin-top: 10px;"
-            onclick="location.href = 'estatistica.php';">Estatisticas</button>
+            onclick="location.href = 'estatistica.php';">Busca</button>
             <button name="btnlb" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'leaderboard.php';">Leaderboard</button>
             <a style="margin-top: 15px;"class="logout" href="index.php">Logout</a>    
