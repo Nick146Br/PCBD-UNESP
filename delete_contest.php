@@ -64,7 +64,7 @@ if (isset($_POST['excluir'])) {
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title>Excluir Exercício</title>
+	<title>Excluir Contes</title>
 
     <style>
         #campo-pesquisa input, button {
