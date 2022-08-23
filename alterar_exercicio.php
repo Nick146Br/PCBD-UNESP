@@ -91,22 +91,22 @@ onclick="location.href = 'home.php';"> HOME </button>
 
             Exercício
             <div class="input-group">
-                <input type="text" placeholder="Nome do Exercicio" name="Nome_Exercicio" value="<?php echo $nome; ?>">
+                <input type="text" placeholder="Nome do Exercicio" name="Nome_Exercicio" value="<?php echo $nome; ?>" required>
             </div>
 
             Tema
             <div class="input-group">
-                <input type="text" placeholder="Tema" name="Tema" value="<?php echo $tema; ?>">
+                <input type="text" placeholder="Tema" name="Tema" value="<?php echo $tema; ?>" required>
             </div>
                
             Dificuldade
             <div class="input-group">
-                <input type="number" placeholder="Dificuldade" name="Dificuldade" value="<?php echo $dificuldade; ?>"  min="1" max="5">
+                <input type="number" placeholder="Dificuldade" name="Dificuldade" value="<?php echo $dificuldade; ?>"  min="1" max="5" required>
             </div>
 
             Tags
             <div class="input-group">
-                <input type="text" placeholder="Tags" name="Tags" value="<?php echo $tags; ?>">
+                <input type="text" placeholder="Tags" name="Tags" value="<?php echo $tags; ?>" required>
             </div>
 
             Enunciado
