@@ -6,6 +6,20 @@ error_reporting(0);
 
 session_start();
 
+$nickname = $_SESSION['nickname'];
+  $tempo_assinatura = $_POST['tempo_assinatura'];
+
+  $sql1 = "SELECT fk_Usuario_Nickname from assinante where fk_Usuario_Nickname = '$nickname'";
+  $result = mysqli_query($conn, $sql1);
+  // var_dump($result);
+
+  if($result->num_rows == 0){
+    echo'<script>';
+    echo'var userPreference;';
+    echo'alert("Precisa ser assinante para criar um contest !!");';
+    echo'document.location.href = "home.php";';
+    echo'</script>';
+  }
 // if (isset($_SESSION['nickname'])) {
 //     header("Location: index.php");
 // }

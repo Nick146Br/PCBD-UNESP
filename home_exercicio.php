@@ -50,6 +50,9 @@
             <button name="btnic" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'alterar_exercicio.php';">Alterar Exercicio</button>
 
+            <button name="bttren" class="btn" style="margin-top: 10px;"
+            onclick="location.href = 'trending_problems.php';">Trending Problems</button>
+
             <button name="btnee" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'excluir_exercicio.php';">Excluir Exercicio</button>
         
