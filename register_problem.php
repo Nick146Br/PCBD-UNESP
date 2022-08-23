@@ -14,7 +14,7 @@ function  createConfirmationmbox(){
     echo'<script>';
 	echo'var userPreference;';
     echo'alert("Seu exercicio foi registrado!!");';
-    echo'document.location.href = "home.php";';
+    echo'document.location.href = "home_exercicio.php";';
     echo'</script>';
 }
 

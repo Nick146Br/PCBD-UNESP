@@ -21,7 +21,7 @@
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title>Submissão de Exercicio</title>
+	<title>Home</title>
 </head>
 <body>
     <!-- <div class="header">
@@ -32,10 +32,9 @@
     onclick="location.href = 'home.php';"> HOME </button>
 
 
-	<div class="container" id="cad_submissao" style="min-width: 400px; height: auto; overflow: auto;">
+	<div class="container" id="cad_submissao" style="min-width: 400px; min-height: 370px; height: auto; overflow: auto;">
 		<p class="login-text" style="font-size: 2rem; font-weight: 800;">Sistemas LPC</p>
         
-        O que deseja Fazer?<br>
         
     <div class="login-email">
         <div class="input-group">

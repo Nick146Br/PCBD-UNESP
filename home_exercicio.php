@@ -41,24 +41,18 @@
         <div class="input-group">
         <!-- <button name="btnassinante" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'assinante.php';">Obter Assinatura Premium</button> -->
+            <button name="btnis" class="btn" style="margin-top: 10px;"
+            onclick="location.href = 'submissao.php';">Submeter Solucao</button>
+
             <button name="btnie" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'register_problem.php';">Registrar Exercicio</button>
+
+            <button name="btnic" class="btn" style="margin-top: 10px;"
+            onclick="location.href = 'alterar_exercicio.php';">Alterar Exercicio</button>
+
             <button name="btnee" class="btn" style="margin-top: 10px;"
             onclick="location.href = 'excluir_exercicio.php';">Excluir Exercicio</button>
-            <!-- <button name="btniu" class="btn" style="margin-top: 10px;"
-            onclick="location.href = 'register.php';">Registrar Usuario</button> -->
-            <!-- <button name="btnic" class="btn" style="margin-top: 10px;"
-            onclick="location.href = 'register_contest.php';">Registrar Contest</button> -->
-            <!-- <button name="btnis" class="btn" style="margin-top: 10px;"
-            onclick="location.href = 'submissao.php';">Submeter Solucao</button> -->
-            <!-- <button name="btnieu" class="btn" style="margin-top: 10px;"
-            onclick="location.href = 'excluir_usuario.php';">Excluir Usuario</button> -->
-            <!-- <button name="btnial" class="btn" style="margin-top: 10px;"
-            onclick="location.href = 'alterar_usuario.php';">Alterar Usuario</button> -->
-            <!-- <button name="btniretoco" class="btn" style="margin-top: 10px;"
-            onclick="location.href = 'register_to_contest.php';">Registrar em um Contest</button> -->
-            <!-- <button name="btnamigo" class="btn" style="margin-top: 10px;"
-            onclick="location.href = 'adicionar_amigo.php';">Adicionar Amigos</button> -->
+        
             <a class="voltar" href="home.php">Voltar</a>
             
         </div>
